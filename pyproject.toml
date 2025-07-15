@@ -1,6 +1,6 @@
 [project]
 name = "tree2json"
-version = "0.1.3"
+version = "0.1.4"
 description = "Convert tree-style text structure into JSON format"
 readme = "README.md"
 requires-python = ">=3.7"

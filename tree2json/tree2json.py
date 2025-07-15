@@ -83,7 +83,17 @@ class Tree2Json:
         if first_line == ".":
             root_name = "."
         else:
-            root_name = os.path.basename(first_line.replace("\\", "/"))  # 防止 Windows 路径
+            # root_name = os.path.basename(first_line.replace("\\", "/"))  # 防止 Windows 路径
+            # 修复：移除末尾的路径分隔符
+            root_name = first_line.rstrip("/\\")
+            # 如果还有路径分隔符，取最后一部分
+            if "/" in root_name or "\\" in root_name:
+                root_name = os.path.basename(root_name.replace("\\", "/"))
+        
+        # 确保根目录名称不为空
+        if not root_name:
+            root_name = "root"
+            
         self.root = {
             "level": 0,
             "type": "dir",

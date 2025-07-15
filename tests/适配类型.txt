@@ -39,3 +39,18 @@ G:\Desktop\111\code
       └── webviews
          └── launch-tree-ui
 ---------------------------------------------------------------------------
+根目录结尾是/或者\\
+aaa/
+├── data
+│   ├── data.zip
+│   ├── examples
+│   ├── PUNet
+│   └── results
+├── datasets
+│   ├── __pycache__
+│   └── toy.py
+└── utils
+    ├── denoise.py
+    ├── __pycache__
+    └── transforms.py
+---------------------------------------------------------------------------
